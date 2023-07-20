@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Melflix - Movie Details</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				padding: 2rem;
+				margin: 0;
+			}
+			.container {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				margin-bottom: 20px;
+			}
+			.movie-poster {
+				width: 250px;
+				height: 350px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin-right: 20px;
+				border-radius: 8px;
+			}
+			.movie-details-container {
+				flex: 1;
+				padding: 20px;
+				background-color: #ffffff;
+				color: #000000;
+				border-radius: 8px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+			}
+			.movie-details-container h2,
+			.movie-details-container p {
+				margin: 0;
+			}
+			#addToWatchlistButton {
+				margin-top: 10px;
+				background-color: #dcbb00;
+				color: #000000;
+				font-size: 16px;
+				font-weight: bold;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				padding: 10px 20px;
+			}
+			.cast-and-crew-container {
+				flex: 1;
+				padding: 20px;
+				background-color: #ffffff;
+				color: #000000;
+				border-radius: 8px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
+			}
+			.cast-and-crew-container h3 {
+				margin-top: 0;
+				color: #000000;
+			}
+			ul {
+				padding: 0;
+				list-style-type: none;
+			}
+			button {
+				margin-top: 10px;
+				padding: 10px 20px;
+				background-color: #d32f2f;
+				color: #fff;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			button:hover {
+				background-color: #b71c1c;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="movie-poster" id="moviePoster"></div>
+			<div class="movie-details-container">
+				<div class="movie-details" id="movieDetails"></div>
+				<button id="addToWatchlistButton" disabled>Add to Watchlist</button>
+			</div>
+		</div>
+
+		<div id="castAndCrewContainer" class="cast-and-crew-container">
+			<h3>Cast and Crew</h3>
+			<ul id="castAndCrewList"></ul>
+		</div>
+		<br />
+		<br />
+		<button id="backButton">Go Back</button>
+
+		<script src="movie.js"></script>
+	</body>
+</html>
